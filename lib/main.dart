@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:solidifly/screens/home_screen.dart';
-import 'package:solidifly/screens/login_screen.dart';
+import 'package:solidifly/ui/screens/create_screen.dart';
+import 'package:solidifly/ui/screens/home_screen.dart';
 
 
 Future main () async {
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: const Color(0xffffffff)
       ),
-      home: const HomeScreen(),
+      home: const CreateScreen(),
     );
   }
 }

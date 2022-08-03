@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 const addButtonColor = Color(0xffff6aa1);
 const backgroudColor = Color(0xff717f7f);
+const fieldBackgroudColor = Color(0xfff1f5f4);
 const mainColor = Color(0xff9181fe);
 const textColor = Colors.white;
 

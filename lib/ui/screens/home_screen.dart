@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:solidifly/screens/constantes.dart';
+import 'package:solidifly/utils/constantes.dart';
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);

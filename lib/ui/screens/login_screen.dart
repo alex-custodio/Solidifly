@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:solidifly/screens/constantes.dart';
+import 'package:solidifly/utils/constantes.dart';
+
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
