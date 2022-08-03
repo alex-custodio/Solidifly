@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "957388044651",
+    "project_id": "solidifly-54b3e",
+    "storage_bucket": "solidifly-54b3e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957388044651:android:49f81f59cefa22e5f4342e",
+        "android_client_info": {
+          "package_name": "lisbom.solidifly.solidifly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "957388044651-viauqp7oiqc78gn514vmfbu9v0cosnuh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTNM1Okc_tbyMOpfqku4dS5HfUZq7toS4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "957388044651-viauqp7oiqc78gn514vmfbu9v0cosnuh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
