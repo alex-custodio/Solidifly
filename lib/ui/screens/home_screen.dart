@@ -61,7 +61,9 @@ class HomeScreen extends StatelessWidget {
               Icons.add,
               size: 40,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pushNamed("/create");
+            },
             style: ElevatedButton.styleFrom(
               fixedSize: const Size(60, 60),
               shape: const CircleBorder(),

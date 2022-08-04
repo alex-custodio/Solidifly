@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:solidifly/ui/screens/create_screen.dart';
-import 'package:solidifly/ui/screens/home_screen.dart';
+import 'package:solidifly/utils/routes.dart';
 
 
 Future main () async {
@@ -21,7 +20,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: const Color(0xffffffff)
       ),
-      home: const CreateScreen(),
+      initialRoute: "/home",
+      routes: routes(),
     );
   }
 }
