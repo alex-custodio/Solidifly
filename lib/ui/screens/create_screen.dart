@@ -28,9 +28,16 @@ class CreateScreen extends StatelessWidget {
       return data;
     }
 
-    void sendDataToJava() {
+    Future<void> sendDataToJava() async {
       var dataMap = getData();
-      //Fazer aqui a comunicação com o backend
+      String publicKey = "";
+      String contractAdress = "";
+      try {
+        publicKey = await platform.invokeMethod("getPublicKey", dataMap);
+        contractAdress = await platform.invokeMethod("getContractAddress");
+      } catch (e) {
+        print(e);
+      }
     }
 
     return Scaffold(
@@ -60,14 +67,14 @@ class CreateScreen extends StatelessWidget {
             hintText: "Adicione a sua chave privada ao smart contract",
             controller: controllerPrivateKey,
           ),
-          
           AppButton(
-            buttonName: "Criar e fazer deploy", 
+            buttonName: "Criar e fazer deploy",
             onPressed: () {
-                sendDataToJava();
-                Navigator.of(context).pushNamed("/home"); 
-            }, 
-            buttonColor: backgroudColor,)
+              sendDataToJava();
+              Navigator.of(context).pushNamed("/create");
+            },
+            buttonColor: backgroudColor,
+          )
         ],
       ),
     );
