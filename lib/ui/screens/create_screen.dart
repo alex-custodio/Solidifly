@@ -34,7 +34,7 @@ class CreateScreen extends StatelessWidget {
           const AppForm(
             hintText: "Adicione a sua chave privada ao smart contract",
           ),
-          AppButton(buttonName: "Criar e fazer deploy", onPressed: () {})
+          AppButton(buttonName: "Criar e fazer deploy", onPressed: () {}, buttonColor: backgroudColor,)
         ],
       ),
     );
