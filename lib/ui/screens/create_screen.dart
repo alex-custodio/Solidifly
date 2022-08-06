@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:solidifly/ui/widgets/app_button.dart';
+import 'package:solidifly/ui/widgets/app_dialog.dart';
 import 'package:solidifly/ui/widgets/app_form.dart';
 import 'package:solidifly/utils/constantes.dart';
 
@@ -37,7 +38,7 @@ class CreateScreen extends StatelessWidget {
         //Esse response é onde tem a string com um delimitador de hifen (-), aí na primeira parte está o dado do endereço público da pessoa que fez o deploy, e no lado direito está o endereço do contrato deployed
         response = await platform.invokeMethod("getPrivateKey", dataMap);
         //contractAdress = await platform.invokeMethod("getSmartContractAddress");
-        
+
       } catch (e) {
         print(e);
       }
@@ -73,8 +74,17 @@ class CreateScreen extends StatelessWidget {
           AppButton(
             buttonName: "Criar e fazer deploy",
             onPressed: () {
-              sendDataToJava();
-              Navigator.of(context).pushNamed("/create");
+              //sendDataToJava();
+              showDialog(
+                  context: context,
+                  builder: (_) => AppDialog(
+                        title: "Smart Contract criado",
+                        content:
+                            "Seu Smart Contract foi criado com sucesso :)", onPressed: () { 
+                             Navigator.of(context).pushNamed("/home"); },
+                             
+                      ),
+                      barrierDismissible: false);
             },
             buttonColor: backgroudColor,
           )
