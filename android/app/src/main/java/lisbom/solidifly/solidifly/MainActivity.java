@@ -29,7 +29,7 @@ public class MainActivity extends FlutterActivity {
     public void configureFlutterEngine(@NonNull FlutterEngine flutterEngine)  {
         super.configureFlutterEngine(flutterEngine);
 
-        //System.out.print(contractAddress);
+        
         new MethodChannel(flutterEngine.getDartExecutor().getBinaryMessenger(), CHANNEL)
                 .setMethodCallHandler(
                         (call, result) -> {
@@ -45,8 +45,8 @@ public class MainActivity extends FlutterActivity {
 
                                     @Override
                                     public void run() {
-                                        //PK = "639290ce3612ffbbf4e0dd0cf9a1c88371bccfb6889e1ded87ed2ca4ba3af796";
-                                        PK = "8930d3629c0ba7b390b0ebbc02fe336cff6594362f2443514c9c6dd35930c764";
+                                        
+                                        PK = privateKey;
                                         Web3j web3j = Web3j.build(new HttpService("HTTP://192.168.100.15:7545"));
                                         try {
                                             Credentials credentials = Credentials.create(PK);
@@ -67,7 +67,7 @@ public class MainActivity extends FlutterActivity {
                                 
 
 
-                                //System.out.print("getCredentialsFromPrivateKey.getAddress");
+                        
                             }else{
                                 System.out.println("not done");
                             }
