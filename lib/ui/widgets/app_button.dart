@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:solidifly/utils/constantes.dart';
-
 class AppButton extends StatelessWidget {
   final String buttonName;
   final VoidCallback onPressed;
+  final Color buttonColor;
 
   const AppButton({
     Key? key,
     required this.buttonName,
     required this.onPressed,
+    required this.buttonColor,
   }) : super(key: key);
 
   @override
@@ -24,7 +24,7 @@ class AppButton extends StatelessWidget {
         ),
         style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
-          primary: backgroudColor,
+          primary: buttonColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15),
           ),

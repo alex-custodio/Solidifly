@@ -1,13 +1,18 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:solidifly/ui/provider/google_sign_in.dart';
+import 'package:solidifly/ui/widgets/app_button.dart';
 import 'package:solidifly/utils/constantes.dart';
 
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
+      final user = FirebaseAuth.instance.currentUser!;
     return Scaffold(
+
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(appBarSize),
         child: AppBar(
@@ -22,13 +27,16 @@ class HomeScreen extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
-                Container(
-                  height: 150,
-                  width: 150,
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle, color: Colors.amber),
-                ),
-                Text("mdgsadgdasgasd"),
+               Row(
+                 children: [
+                   CircleAvatar(
+                    radius: 60,
+                    backgroundImage: NetworkImage(user.photoURL!),
+                   ),
+                   Text("   Usuário: " + user.displayName!,
+                   style: const TextStyle(color: Colors.black, fontSize: 20),)
+                 ],
+               )
               ],
             ),
           ),
@@ -52,7 +60,7 @@ class HomeScreen extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.only(left: 10.0, right: 10.0, bottom: 40.0),
             child: Text(
-              "Crie e faça deply do seu smart contract de maneira interativa clicando no botão abaixo",
+              "Crie e faça deploy do seu smart contract de maneira interativa clicando no botão abaixo",
               style: TextStyle(fontSize: 20),
             ),
           ),
@@ -69,7 +77,12 @@ class HomeScreen extends StatelessWidget {
               shape: const CircleBorder(),
               primary: addButtonColor,
             ),
-          )
+          ),
+          AppButton(buttonName: "Log out", buttonColor: Colors.red, onPressed: (){
+            final provider = Provider.of<GoogelSignInProvider>(context, listen: false);
+            provider.logOut();
+            
+          })
         ],
       ),
     );
