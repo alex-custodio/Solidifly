@@ -60,7 +60,7 @@ class HomeScreen extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.only(left: 10.0, right: 10.0, bottom: 40.0),
             child: Text(
-              "Crie e faça deply do seu smart contract de maneira interativa clicando no botão abaixo",
+              "Crie e faça deploy do seu smart contract de maneira interativa clicando no botão abaixo",
               style: TextStyle(fontSize: 20),
             ),
           ),
