@@ -77,9 +77,6 @@ public class MainActivity extends FlutterActivity {
 
 
     }
-    //public String getSmartContractAddress(){
-    //    return MainActivity.contractAddress;
-    //}
     public String getPrivateKey(){
         return PK;
     }
