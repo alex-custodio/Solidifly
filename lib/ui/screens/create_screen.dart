@@ -34,7 +34,9 @@ class CreateScreen extends StatelessWidget {
       String contractAdress = "";
       try {
         publicKey = await platform.invokeMethod("getPublicKey", dataMap);
-        contractAdress = await platform.invokeMethod("getContractAddress");
+        //contractAdress = await platform.invokeMethod("getSmartContractAddress");
+        print(publicKey);
+        //print(contractAdress);
       } catch (e) {
         print(e);
       }
