@@ -32,12 +32,9 @@ class CreateScreen extends StatelessWidget {
     Future<void> sendDataToJava() async {
       var dataMap = getData();
       String response = "";
-      String publicKey = "";
-      String contractAdress = "";
       try {
-        //Esse response é onde tem a string com um delimitador de hifen (-), aí na primeira parte está o dado do endereço público da pessoa que fez o deploy, e no lado direito está o endereço do contrato deployed
         response = await platform.invokeMethod("getPrivateKey", dataMap);
-        //contractAdress = await platform.invokeMethod("getSmartContractAddress");
+        
 
       } catch (e) {
         print(e);
