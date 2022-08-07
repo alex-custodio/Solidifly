@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "957388044651",
+    "project_id": "solidifly-54b3e",
+    "storage_bucket": "solidifly-54b3e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957388044651:android:49f81f59cefa22e5f4342e",
+        "android_client_info": {
+          "package_name": "lisbom.solidifly.solidifly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "957388044651-evu0hu2cu3lom0bjvhdb82lqpde646gd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "lisbom.solidifly.solidifly",
+            "certificate_hash": "eee8acbb618b1105f6741f40fa78750fb48a1a94"
+          }
+        },
+        {
+          "client_id": "957388044651-u3um0bdb8qf280ung0aj4i9v25r45o6p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "lisbom.solidifly.solidifly",
+            "certificate_hash": "24ac81f482926ea2ea272d596dc0e69addda7882"
+          }
+        },
+        {
+          "client_id": "957388044651-viauqp7oiqc78gn514vmfbu9v0cosnuh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTNM1Okc_tbyMOpfqku4dS5HfUZq7toS4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "957388044651-viauqp7oiqc78gn514vmfbu9v0cosnuh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
