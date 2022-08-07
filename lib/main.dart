@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: const Color(0xffffffff)
       ),
-      initialRoute: "/create",
+      initialRoute: "/login",
       routes: routes(),
       )
     );
