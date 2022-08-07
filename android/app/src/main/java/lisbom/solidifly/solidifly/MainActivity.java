@@ -57,7 +57,7 @@ public class MainActivity extends FlutterActivity {
                                             
                                             contractAddress = contract.getContractAddress();
                                             
-                                            result.success(credentials.getAddress() + "-" + contractAddress);
+                                            result.success(contractAddress);
                                         } catch (Exception e) {
                                             e.printStackTrace();
                                         }

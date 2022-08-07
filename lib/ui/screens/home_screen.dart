@@ -81,7 +81,7 @@ class HomeScreen extends StatelessWidget {
           AppButton(buttonName: "Log out", buttonColor: Colors.red, onPressed: (){
             final provider = Provider.of<GoogelSignInProvider>(context, listen: false);
             provider.logOut();
-            
+            Navigator.of(context).pushNamed("/login");       
           })
         ],
       ),
