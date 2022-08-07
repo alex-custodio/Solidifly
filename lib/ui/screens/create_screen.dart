@@ -74,7 +74,7 @@ class CreateScreen extends StatelessWidget {
           AppButton(
             buttonName: "Criar e fazer deploy",
             onPressed: () {
-              //sendDataToJava();
+              sendDataToJava();
               showDialog(
                   context: context,
                   builder: (_) => AppDialog(
